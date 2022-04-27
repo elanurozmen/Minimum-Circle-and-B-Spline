@@ -21,7 +21,7 @@ int main()
     }
     initwindow(1536,864,""); //graphics.h icin pencere
     setcolor(YELLOW); //renk belirler
-    for(j=-20; j<=20; j=j+5) //eksen üstüne sayilari yazdirir
+    for(j=-20; j<=20; j=j+5) //eksen Ã¼stÃ¼ne sayilari yazdirir
     {
         if(j==0)
             continue;
@@ -77,7 +77,7 @@ int main()
     setcolor(WHITE);
     if(sayac==noktasayisi)
     {
-        circle(768+21*(x1+x2)/2,432-21*(y1+y2)/2,cap/2*21); // en uzak 2 nokta capsa cemberi çizdirir
+        circle(768+21*(x1+x2)/2,432-21*(y1+y2)/2,cap/2*21); // en uzak 2 nokta capsa cemberi Ã§izdirir
         line(768+x2*21,432-y2*21,768+((x1+x2)/2)*21,432-((y1+y2)/2)*21); //Yaricap cizdirir
         bar(765+21*((x1+x2)/2),429-21*((y1+y2)/2),771+21*((x1+x2)/2),435-21*((y1+y2)/2)); //Merkezi gosterir
         outtextxy(768+((x1+x2)/2)*21,435-((y1+y2)/2)*21,"M");
@@ -108,7 +108,7 @@ int main()
     getch();
     int tempx=0,tempy=0,tx=a[0][0]-1,ty=a[0][1],zx=a[noktasayisi-1][0]+1,zy=a[noktasayisi-1][1],ix=0,iy=0,kx=0,ky=0;
     double u=0,pixx=0,pixy=0;
-    for(i=0; i<noktasayisi; i++) //Bubble Sort algoritmasi=>x ve y leri kucukten buyuge sýraladým(b-spline icin)
+    for(i=0; i<noktasayisi; i++) //Bubble Sort algoritmasi=>x ve y leri kucukten buyuge siraladim(b-spline icin)
     {
         for(int j=1; j<noktasayisi-i; j++)
         {
@@ -130,21 +130,21 @@ int main()
         {
             if(i==0)
             {
-                ix=tx; //tx ve ty hayali noktalar (formul icin gerekli, raporda detayi var)
+                ix=tx; //tx ve ty hayali noktalar
                 iy=ty;
                 kx=a[i+2][0];
                 ky=a[i+2][1];
             }
             else if(i==noktasayisi-2)
             {
-                kx=zx; // zx zy hayali noktalar (formul icin gerekli, raporda detayi var)
+                kx=zx; // zx zy hayali noktalar
                 ky=zy;
                 ix=a[i-1][0];
                 iy=a[i-1][1];
             }
             else
             {
-                ix=a[i-1][0]; //iki nokta arasi spline icin gerekli degiskenler(raporda detayi var)
+                ix=a[i-1][0]; //iki nokta arasi spline icin gerekli degiskenler
                 iy=a[i-1][1];
                 kx=a[i+2][0];
                 ky=a[i+2][1];
